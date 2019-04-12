@@ -1,0 +1,217 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~bootstrap/dist/css/bootstrap.css';
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-size: 14px;
+  color: #72777a;
+  letter-spacing: .2px;
+  overflow-x: hidden;
+}
+
+/*
+    DEMO STYLE
+*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  width: 250px;
+  background: #fff;
+  color: #515253;
+  transition: all 0.3s;
+  border: 1px solid #E7E7E7;
+  border-top: none;
+}
+
+#sidebar > div:nth-child(2) > div.active, #sidebar > div:nth-child(2) > div.active > span > p{
+  color: #23B7E5 !important;
+}
+
+#sidebar > div:nth-child(2) > div.active {
+  border-left: 3px solid #23B7E5;
+}
+
+#sidebar > div:nth-child(2) > div.active > span {
+  margin-left: -3px !important;
+}
+
+#sidebar.active {
+  width: 40px !important;
+}
+
+#sidebar.active > div:nth-child(2) > div > span > p, #sidebar.active > div:nth-child(2) > p {
+  display: none;
+}
+
+#sidebar.active > div:nth-child(2) > div {
+  margin-top: 1rem;
+  padding-left: 14px !important;
+}
+
+#sidebar.active .sidebar-header-logo {
+  content: url('./assets/images/sprobe_logo_only.png') !important;
+  height: 30px;
+  width: 30px;
+}
+
+#sidebar .sidebar-header {
+  height: 40px;
+  text-align: center;
+  background: #F8F8F8;
+  border: 1px solid #E7E7E7;
+  color: #707070;
+  padding: 4px;
+  border-right: none;
+}
+
+.sidebar-header-logo {
+  height: 30px;
+  width: 84px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.content-header {
+  height: 40px;
+  text-align: left;
+  background: #F8F8F8;
+  border: 1px solid #E7E7E7;
+  border-left: none;
+  color: #707070;
+  padding: 10px;
+}
+
+.content-body {
+  margin: 25px;
+  padding: 16px;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #E7E7E7;
+  border-radius: 5px;
+}
+
+.content-sub-header {
+  height: 70px;
+  text-align: left;
+  background-color: #FFF;
+  border: 1px solid #E7E7E7;
+  border-left: none;
+  border-top: none;
+  color: #929292;
+  font-size: 24px;
+  font-weight: normal;
+  padding: 16px 16px 16px 25px;
+}
+
+.wrapper .footer-container {
+  height: 60px;
+  border-top: 1px solid #E7E7E7;
+  padding: 20px;
+  z-index: 109;
+  font-size: .875rem;
+}
+
+.main-content {
+  overflow: hidden;
+  height: calc(100% - 100px);
+}
+
+.content-body-header img {
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    width: 40px !important;
+  }
+
+  #sidebar > div:nth-child(2) > div > span > p,
+  #sidebar > div:nth-child(2) > p {
+    display: none;
+  }
+
+  #sidebar > div:nth-child(2) > div {
+    margin-top: 1rem;
+    padding-left: 14px !important;
+  }
+
+  #sidebar .sidebar-header-logo {
+    content: url('./assets/images/sprobe_logo_only.png') !important;
+    height: 30px;
+    width: 30px;
+  }
+
+}
