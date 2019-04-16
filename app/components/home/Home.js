@@ -1,5 +1,8 @@
 // @flow
 import React, { Component } from 'react';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction'
 import videoBoard from '../../assets/images/video.png';
 import transitionBoard from '../../assets/images/transition.png';
 import deliveryBoard from '../../assets/images/delivery.png';
@@ -11,8 +14,16 @@ type Props = {};
 export default class Home extends Component<Props> {
   props: Props;
 
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = (arg) => {
+    console.log(arg)
+  };
+
   render() {
-    console.log(this.props.history)
     return (
       <main className="main-content d-flex flex-column">
         <div className="content-sub-header">Dashboard</div>
@@ -30,20 +41,23 @@ export default class Home extends Component<Props> {
             className="cursor-pointer"
             src={transitionBoard}
             style={{ marginRight: '1rem' }}
+            onClick={() => this.props.history.push('/transition')}
           />
           <img
             className="cursor-pointer"
             src={deliveryBoard}
             style={{ marginRight: '1rem' }}
+            onClick={() => this.props.history.push('/delivery')}
           />
           <img
             className="cursor-pointer"
             src={deviceBoard}
             style={{ marginRight: '1rem' }}
+            onClick={() => this.props.history.push('/device')}
           />
         </div>
         <div className={`content-body ${styles.mtDashboard}`}>
-          <p>Dashboard</p>
+          <FullCalendar dateClick={this.handleClick} defaultView="dayGridMonth" plugins={[dayGridPlugin, interactionPlugin]} />
         </div>
       </main>
     );

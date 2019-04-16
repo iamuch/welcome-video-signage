@@ -1265,15 +1265,27 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.6.3.tgz#61c122c420d7a91613f393d6a06e5a4c6ae6abf3"
   integrity sha512-s5PLdI9NYgjBvfrv6rhirPHlAHWx+Sfo/IjsAeiXYfmemC/GSjwsyz1wLnGPazbLPXWfk62ks980o9AmsxYUEQ==
 
-"@fullcalendar/core@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-4.0.1.tgz#9ae5d53f67dc5f5062ffa142b9226d57b0a3b41e"
-  integrity sha512-dUhBtZ2hIuPFJP4Rr1QOFs5/nG5EAnzqMDvy1IZ0JEBw/+0Dwj4X55Ugb3buHBh5GDrQmPbZVW21mbcUqeTprQ==
+"@fullcalendar/core@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-4.0.2.tgz#59ef822ba0c4bda60609d8b2d9f71bee8875505b"
+  integrity sha512-5DBjqoQretok6L0GNpcqkr0HnCNDzRH0REWJDeTTyHGi62V+8MC3IqZkpmDrFITTkIyDrvf8GHl3WhTI0bjYPQ==
 
 "@fullcalendar/daygrid@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-4.0.1.tgz#383bfd51dd55bbec2ccc90926e9dbdf710aa3789"
   integrity sha512-nKFFKgTm5eijOukD6pjsQSLlsBoMrKuHXc00zaHaMWSeJndGHxtseR8oeHOnclNNScMKLXLNZthzEduSqqyuRw==
+
+"@fullcalendar/interaction@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-4.0.2.tgz#8459f3d89f9e0e56405e35c25513edf573e5a096"
+  integrity sha512-AlOkSmeVI7fDGIGlbaqxHRXxL38SDEMUv6BW/2Cvu8eC7JsrshsHhCIAJE4N17M0RnTTkRwUjtroLZqnkPCHhg==
+
+"@fullcalendar/react@^4.0.2-beta":
+  version "4.0.2-beta"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/react/-/react-4.0.2-beta.tgz#9f7e8517110fe1023a80f324f6af27d3f2b0be82"
+  integrity sha512-ZhhjsUfDxg14pluTi0pt0vvRrrTv2rISnSN8IWNqU8sWt4ctpG8KEPP1TukfHfTXYloTBuxkR44P4Fe2Y7ar6A==
+  dependencies:
+    "@fullcalendar/core" "^4.0.2"
 
 "@iamstarkov/listr-update-renderer@0.4.1":
   version "0.4.1"

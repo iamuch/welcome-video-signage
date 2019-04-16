@@ -1,4 +1,7 @@
 {
   "HOME": "/",
-  "VIDEO": "/videos"
+  "VIDEO": "/video",
+  "DELIVERY": "/delivery",
+  "DEVICE": "/device",
+  "TRANSITION": "/transition"
 }

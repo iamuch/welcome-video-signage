@@ -1,14 +1,12 @@
 // @flow
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import logoComplete from '../../assets/images/sprobe_logo_complete.png';
-import {withRouter} from "react-router-dom";
+
+type Props = {
+  history: {}
+};
 
 class Sidenav extends Component {
-  static propTypes = {
-    history: PropTypes.object.isRequired
-  };
-
   render() {
     return (
       <nav id="sidebar">
@@ -28,7 +26,7 @@ class Sidenav extends Component {
           <div
             className={`d-flex flex-row mb-3 cursor-pointer ${
               this.props.history.location.pathname === '/' ? 'active' : ''
-            }`}
+              }`}
             style={{ paddingLeft: '15px', height: '30px' }}
             onClick={() => this.props.history.push('/')}
           >
@@ -46,9 +44,11 @@ class Sidenav extends Component {
             </span>
           </div>
           <div
-            className="d-flex flex-row mb-3 cursor-pointer"
+            className={`d-flex flex-row mb-3 cursor-pointer ${
+              this.props.history.location.pathname === '/video' ? 'active' : ''
+              }`}
             style={{ paddingLeft: '15px', height: '30px' }}
-            onClick={() => this.props.history.push('/videos')}
+            onClick={() => this.props.history.push('/video')}
           >
             <div className="active" />
             <span className="d-flex flex-row">
@@ -74,8 +74,13 @@ class Sidenav extends Component {
             Management
           </p>
           <div
-            className="d-flex flex-row mb-3 cursor-pointer"
+            className={`d-flex flex-row mb-3 cursor-pointer ${
+              this.props.history.location.pathname === '/delivery'
+                ? 'active'
+                : ''
+              }`}
             style={{ paddingLeft: '15px', height: '30px' }}
+            onClick={() => this.props.history.push('/delivery')}
           >
             <div className="active" />
             <span className="d-flex flex-row">
@@ -92,8 +97,13 @@ class Sidenav extends Component {
             </span>
           </div>
           <div
-            className="d-flex flex-row mb-3 cursor-pointer"
+            className={`d-flex flex-row mb-3 cursor-pointer ${
+              this.props.history.location.pathname === '/device'
+                ? 'active'
+                : ''
+              }`}
             style={{ paddingLeft: '15px', height: '30px' }}
+            onClick={() => this.props.history.push('/device')}
           >
             <div className="active" />
             <span className="d-flex flex-row">
@@ -110,8 +120,13 @@ class Sidenav extends Component {
             </span>
           </div>
           <div
-            className="d-flex flex-row mb-3 cursor-pointer"
+            className={`d-flex flex-row mb-3 cursor-pointer ${
+              this.props.history.location.pathname === '/transition'
+                ? 'active'
+                : ''
+              }`}
             style={{ paddingLeft: '15px', height: '30px' }}
+            onClick={() => this.props.history.push('/transition')}
           >
             <div className="active" />
             <span className="d-flex flex-row">
